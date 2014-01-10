@@ -1,3 +1,3 @@
 module ProtesteScaffold
-  VERSION = "0.3.36"
+  VERSION = "0.3.4"
 end

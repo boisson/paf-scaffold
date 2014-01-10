@@ -31,8 +31,7 @@ Gem::Specification.new do |gem|
   gem.add_runtime_dependency('simple_xlsx_writer')
   gem.add_runtime_dependency('acts_as_xlsx')
   gem.add_runtime_dependency('prawn')
-  gem.add_runtime_dependency('ZenTest', '4.8.3')  #don`t work in 4.0.0.
-  # gem.add_runtime_dependency('ZenTest', '4.9.3')
+  gem.add_runtime_dependency('ZenTest')
   gem.add_runtime_dependency('rspec')
   gem.add_runtime_dependency('rspec-rails')
   gem.add_runtime_dependency('ransack', '0.7.2')
