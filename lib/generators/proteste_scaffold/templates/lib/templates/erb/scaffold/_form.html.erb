@@ -1,0 +1,43 @@
+<%%= simple_form_for(@<%= singular_table_name %>, html: {class: 'form-horizontal'}, remote: true) do |f| %>
+  <%- attributes.each do |attribute| -%>
+  <%
+  case attribute.type
+    when :text
+  %>
+  <%%= f.input :<%= attribute.name %>, as: :ckeditor %>
+  <% when :string %>
+  <%%= f.input :<%= attribute.name %>, as: :string, input_html: {class: 'span5'} %>
+  <% when :n_to_n_inline %>
+  <%%= f.association :<%= attribute.name %>, collection: <%=attribute.name.singularize.classify%>.order('name ASC'), input_html: {class: 'span5 chosen-multiple'} %>
+  <% when :n_to_n_2_columns %>
+  <%%= f.input :<%= attribute.name %>, :wrapper => :prepend do %>
+    <div class="chosen-multiple-2-columns" id="nxn_<%= attribute.name %>" data-search-placeholder="<%%= t('general.terms.multiple-select.search-placeholder') %>" data-deselect-all="<%%= t('general.terms.multiple-select.deselect-all') %>"><%%= f.association :<%=attribute.name%>, collection: <%=attribute.name.singularize.classify%>.order('name ASC') %></div>
+  <%% end %>
+  <% when :references %>
+  <%%= f.association :<%= attribute.name %>, collection: <%=attribute.name.classify%>.order('name ASC'), input_html: {class: 'span5 chosen-options'} %>
+  <% when :integer, :number %>
+  <%%= f.input :<%= attribute.name %>, input_html: {class: 'spinner'} %>
+  <% when :date %>
+  <%%= f.input :<%= attribute.name %>, as: :datepicker %>
+  <% when :float, :decimal %>
+  <%%= f.input :<%= attribute.name %>, :wrapper => :prepend do %>
+    <span class="add-on"><%%= t('number.currency.format.unit')%></span><%%= f.text_field :<%= attribute.name %>, class: :currency %>
+  <%% end %>
+  <% else %>
+  <%%= f.input :<%= attribute.name %> %>
+  <%- end -%>
+  <%- end -%>
+
+  <div class="form-actions">
+    <%%= f.button :submit, class: 'btn btn-primary' %>
+    <%%= f.button :submit, value: t('general.actions.save_and_go_to_new'), name: :submit_and_go_to_new, class: 'btn' %>
+    <%%= link_to(t('general.actions.cancel'), 'javascript:gebo_datatables.go_to_list()', class: 'btn') %>
+  </div>
+<%% end %>
+
+
+<script type="text/javascript" charset="utf-8">
+  $(function(){
+    p_scaffold_form.init_all();
+  })
+</script>

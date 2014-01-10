@@ -1,0 +1,75 @@
+// Place all the styles related to the Datatable controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.DTTT_container {
+  margin-right: 6px
+}
+
+.dataTables_length label{
+  line-height: 26px
+}
+
+.number, .numeric{
+  .help-inline{
+    float: left;
+    clear: both;
+  }
+}
+
+.currency{
+  width: 104px !important;
+}
+
+input.datepicker{
+  width: 70px !important;
+}
+
+.top-right, .top-left, .top-center {
+  top: 0 !important;
+}
+
+.input-small-x{
+  width: 30px;
+}
+
+#import-loader{
+  display:none;
+  text-align: center
+}
+
+.modal-body .field{
+  margin-bottom: 10px
+}
+
+.modal-body .field .aux-field{
+  margin-right: 3px
+}
+
+
+.tab-content{
+  overflow: hidden
+}
+
+.btn-group-not-clear{
+  float: left;
+  margin-right: 10px;
+}
+
+.multi_search {
+  width:152px;
+  margin:4px !important;
+}
+.ms-container {margin-bottom:10px}
+.ms-container .ms-optgroup li.ms-elem-selectable {padding-left:20px}
+.ms-container h4 {font-weight:100;padding:4px 6px;background:#efefef;border-bottom:1px solid #ccc;-webkit-border-radius: 4px 4px 0px 0px;border-radius: 4px 4px 0px 0px}
+.ms-container .multi_search + .ms-list {height:196px !important}
+.sForm_deselect {
+  margin:2px !important;
+  display:block
+}
+
+.center_actions{
+  text-align: center;
+  white-space:nowrap;
+}

@@ -1,0 +1,31 @@
+<% unless @search.conditions.empty? %>
+<div class="row-fluid search_page" id="advanced_search_filtered_terms">
+  <div class="span12">
+    <div class="alert alert-block alert-info fade in" id="filtered_terms_list"> 
+      <a href="<%= url_for(action: :index, only_path: true) %>" class="close">×</a> 
+      <h4 class="heading"><%= t('general.headers.modal_advanced_search') %></h4>
+    </div> 
+  </div>
+</div>
+<% else %>
+<% @search.build_condition %>
+<% end -%>
+
+<div id="advanced_search" class="modal hide">
+  <%= search_form_for @search, class: 'form-inline' do |f| %>
+  <div class="modal-header">
+    <%= t('general.headers.modal_advanced_search') %>
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+  </div>
+  <div class="modal-body">
+    <%= f.predicate_select({}, {disabled: :disabled, style: "display:none"}) %>
+    <%= f.condition_fields do |c| %>
+      <%= render "advanced_search/condition_fields", f: c %>
+    <% end %>
+    <p><%= link_to_add_fields t('general.actions.advanced-search.add-conditions'), f, :condition, 'advanced_search/condition_fields' %></p>
+  </div>
+  <div class="modal-footer">
+    <%= f.submit t('general.actions.advanced-search.search'), class: 'btn-primary btn' %>
+  </div>
+  <% end %>
+</div>

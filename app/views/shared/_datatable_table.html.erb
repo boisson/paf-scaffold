@@ -1,0 +1,17 @@
+<table id="<%=datatable_id%>" class="crud_datatable table table-bordered table-condensed table-striped table_vam" <%= datatable_object_paths %> >
+<thead>
+  <tr>
+    <%=content_for_header %>
+  </tr>
+</thead>
+<tbody>
+</tbody>
+<% if number_of_columns > 0 %>
+<tfoot>
+  <tr>
+    <td><%= link_to '<i class="icon-trash"></i>'.html_safe, {action: :batch_destroy, ids: []},remote: true, class: 'btn btn-mini', confirm: t('general.actions.confirm'), title: t('general.actions.delete_selected'), method: :delete, id: :batch_destroy_link  %></td>
+    <td id="footer-td-colspaned" colspan="<%=number_of_columns - 1 %>"></td>
+  </tr>
+</tfoot>
+<% end -%>
+</table>

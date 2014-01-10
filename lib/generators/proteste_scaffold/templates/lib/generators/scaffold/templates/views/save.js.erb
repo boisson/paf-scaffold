@@ -1,0 +1,11 @@
+<%% if @<%=singular_table_name%>.valid? %>
+  var tempDatatable = $('.crud_datatable').dataTable()
+  tempDatatable.fnDraw()
+  $('a[href="#tab-list"]').tab('show')
+<%% if params[:submit_and_go_to_new] %>
+  $('a[href="#tab-new"]').tab('show')
+<%% end -%>
+<%% else %>
+$('#form-content').html('<%%=j render(partial: 'form')%>')
+<%% end -%>
+p_scaffold.show_message_by_ajax('<%%= j bootstrap_flash %>')

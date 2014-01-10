@@ -1,0 +1,18 @@
+'<%= @current_language %>':
+  breadcrumbs:
+    '<%=plural_table_name%>':
+      index: '<%= plural_table_name.humanize %>'
+  general:
+    forms:
+      '<%= singular_table_name %>':
+<%- attributes.find_all{|attribute| attribute.reference? }.each do |attribute| -%>
+        'choose_<%= attribute.name %>': 'Choose <%= attribute.human_name %>'
+<% end %>
+  activerecord:
+    models:
+      '<%= singular_table_name %>': '<%= plural_table_name.humanize %>'
+    attributes:
+      '<%= singular_table_name %>':
+<%- attributes.each do |attribute| -%>
+        '<%= attribute.name %>': '<%= attribute.human_name %>'
+<% end %>

@@ -1,0 +1,13 @@
+<h3 class="heading"><%%= t('activerecord.models.<%= singular_table_name %>') %></h3>
+
+<div class="tabbable">
+	<%%=render partial: 'shared/tabs_crud_header' %>
+	<%%=render partial: 'shared/tabs_crud_body' %>
+</div>
+
+<%%=render partial: 'import/modal_form', locals: {class_to_import: '<%=class_name%>'} %>
+
+
+<%% content_for(:footer) do %>
+<%%= javascript_include_tag '<%= plural_table_name %>', '<%= plural_table_name %>_datatable' %>
+<%% end -%>

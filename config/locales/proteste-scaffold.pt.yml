@@ -1,0 +1,177 @@
+'pt':
+  date:
+    formats:
+      default: '%d/%m/%Y'
+  time:
+    formats:
+      short: '%d/%m, %H:%M h'
+  general:
+    export:
+      errors:
+        quantity_registers: 'Qtd registro'
+        quantity_success: 'Qtd importado'
+        quantity_rejected: 'Qtd rejeitado'
+        line_rejected: 'Linha %{line}'
+    messages:
+      create_success: '%{model_name} foi criado com sucesso.'
+      update_success: '%{model_name} foi atualizado com sucesso.'
+      delete_success: '%{model_name} foi apagado com sucesso.'
+      create_error: 'Não pode criar %{model_name}.'
+      update_error: 'Não pode atualizar %{model_name}.'
+      delete_error: 'Não pode apagar.'
+      modal_ajax_error: 'A aplicação recebeu um erro, por favor contactar o suporte.'
+      delete_error_with_associations: 'Não pode apagar. Este registro tem referência com outros modelos.'
+    headers:
+      modal_import: 'Importar dados'
+      modal_ajax_error: 'Um erro ocorrido'
+      modal_advanced_search: 'Procura avançada'
+    terms:
+      all: Todos
+      import_hint: 'Importar arquivo'
+      copy_hint: 'Copiar para área de transferência'
+      print_hint: 'Imprimir a informação exibida'
+      advanced_search_hint: 'Buscar com parâmetros configurados'
+      hide_column_hint: 'Exibir/ocultar colunas do grid'
+      lines_copied: 'Resultado copiado para sua área de transferência'
+      export_tip: 'Selecione uma das opções para exportar todos os dados encontrados'
+      editing: 'Edição'
+      go_back: Voltar
+      multiple-select:
+        search-placeholder: 'Procurar'
+        deselect-all: 'Apagar tudo'
+      active: 'Ativo'
+      inactive: 'Inativo'
+      'yes': 'Sim'
+      'no': 'Não'
+      choose: 'Escolher uma opção'
+    versions:
+      created: 'Registro criado'
+      destroy: 'Registro apagado'
+      date: Data
+      before: Antes
+      after: Depois
+      author: Usuário
+      current_data: Dados atuais
+      versions: Versão
+    actions:
+      export: 'Exportar'
+      advanced-search:
+        link: 'Procura avançada'
+        search: Procurar
+        add-conditions: 'Adicionar condição'
+        remove-conditions: 'Apagar'
+      send_email: 'Enviar e-mail'
+      save_and_go_to_new: 'Salvar & Adicionar novo'
+      hide_columns: 'Ocultar coluna'
+      confirm: 'Confirmar esta operação?'
+      confirm_lose: 'Confirmar esta operação? Você perderá os dados alterados.'
+      confirm_delete_cascade: 'Confirmar esta operação? Existem outros dados que usam esta informação e serão perdidos.'
+      cancel: 'Cancelar'
+      list: 'Listar'
+      edit: 'Editar'
+      new: 'Novo'
+      versions: 'Versão'
+      show: 'Detalhes'
+      delete: 'Apagar'
+      delete_selected: 'Apagar selecionados'
+      revert: 'Reverter as ultimas alterações'
+      revert_success: 'Reversão com sucesso!'
+      import_success: 'Importado com sucesso!'
+      import_error_file_type: "Unknown file type. Suporta apenas arquivos xlsx."
+      import_error_not_import_at_all: "Algumas linhas contêm erros e não puderam ser importadas. %{link_error_file}"
+      import_click_for_errors_details: 'Clicar aqui para ver o que aconteceu'
+      import: 'Importar dados'
+      importing: 'Importando...'
+      close_modal: 'Fechar'
+      download_example_file: 'Faça o download de um arquivo de exemplo'
+      print: 'Imprimir'
+      copy: 'Copiar'
+      logout: 'Sair'
+      user_profile:
+        edit_profile: 'Alterar meus dados'
+        my_profile: 'Meus dados'
+        edit_password: 'Trocar senha'
+    datatable:
+      sProcessing: "Processando..."
+      sLengthMenu: "Exibir<br />_MENU_"
+      sZeroRecords: "Sem resultados"
+      sInfo: "Início em _START_ até _END_ de _TOTAL_ registros"
+      sInfoEmpty: "Inicio em  0 ate 0 de 0 registros"
+      sInfoFiltered: "(filtrando de _MAX_ registros)"
+      sInfoPostFix: ""
+      sSearch: "Filtrar:<br />"
+      sUrl: ""
+      sFirst: "Primeiro"
+      sPrevious: "Último"
+      sNext: "Próximo"
+      sLast: "Anterior"
+      en:
+  ransack:
+    search: "Procurar"
+    predicate: "Predicado"
+    and: "e"
+    or: "ou"
+    any: "qualquer"
+    all: "todos"
+    combinator: "combinação"
+    attribute: "atributo"
+    value: "valor"
+    condition: "condição"
+    sort: "ordenar"
+    asc: "ascendente"
+    desc: "descendente"
+    predicates:
+      eq: "igual"
+      eq_any: "igual a qualquer "
+      eq_all: "igual a todos"
+      not_eq: "diferente para"
+      not_eq_any: "diferente para qualquer"
+      not_eq_all: "diferente para todos"
+      matches: "semelhante"
+      matches_any: "semelhante a qualquer"
+      matches_all: "semelhante a todos"
+      does_not_match: "sem semelhança"
+      does_not_match_any: "sem semelhança a qualquer"
+      does_not_match_all: "sem semelhança a todos"
+      lt: "menor que"
+      lt_any: "menor que qualquer"
+      lt_all: "menor que todos"
+      lteq: "menor que or igual para"
+      lteq_any: "menor que or igual para qualquer"
+      lteq_all: "menor que or igual para todos"
+      gt: "maior que"
+      gt_any: "maior que qualquer any"
+      gt_all: "maior que todos"
+      gteq: "maior que ou igual para"
+      gteq_any: "maior que ou igual para qualquer"
+      gteq_all: "maior que ou igual para todos"
+      in: "em"
+      in_any: "em qualquer"
+      in_all: "em todos"
+      not_in: "não está em"
+      not_in_any: "não está em qualquer"
+      not_in_all: "não está em todos"
+      cont: "contêm"
+      cont_any: "contem qualquer"
+      cont_all: "contem todos"
+      not_cont: "não contem"
+      not_cont_any: "não contem qualquer"
+      not_cont_all: "não contem todos"
+      start: "iniciar em "
+      start_any: "iniciar com qualquer"
+      start_all: "iniciar com todos"
+      not_start: "doesn't start with"
+      not_start_any: "não iniciar com qualquer"
+      not_start_all: "não iniciar com todos"
+      end: "final com"
+      end_any: "final com qualquer"
+      end_all: "final com todos"
+      not_end: "não final com"
+      not_end_any: "final com qualquer"
+      not_end_all: "final com todos"
+      'true': "é verdade"
+      'false': "é falso"
+      present: "está presente"
+      blank: "é branco"
+      'null': "é nulo"
+      not_null: "não é nulo"

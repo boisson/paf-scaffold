@@ -1,0 +1,22 @@
+<h3 class="heading"><%=@print.page_title%>
+  <span class="pull-right"><%= l Time.now %></span>
+</h3>
+
+<table class="table table-striped table-condensed table-bordered">
+<thead>
+  <tr>
+    <% @print.headers.each do |header|%>
+    <th><%= header %></th>
+    <% end -%>
+  </tr>
+</thead>
+<tbody>
+  <% @print.table_lines.each do |line| %>
+  <tr>
+    <% line.each do |column_value| %>
+    <td><%= column_value %></td>
+    <% end -%>
+  </tr>
+  <% end -%>
+</tbody>
+</table>

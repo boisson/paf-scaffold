@@ -1,0 +1,26 @@
+<div class="modal hide" id="modal-import">
+  <%= simple_form_for(:import, url: import_rows_path(class_to_import), html: {class: 'clear form-horizontal'}) do |f| %>
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3><%= t('general.headers.modal_import')%></h3>
+  </div>
+  <div class="modal-body">
+    <div id="import-loader">
+      <h3><%= t('general.actions.importing') %></h3>
+      <%= image_tag 'ajax_loader.gif' %>
+    </div>
+    
+    <div id="import-content-upload">
+      <%= f.input :file, as: :file %><br />
+      <%= link_to t('general.actions.download_example_file'), 
+      download_example_file_to_import_path(class_to_import, 
+      excluded_columns: (defined?(excluded_columns) ? excluded_columns : nil),
+      forced_columns:   (defined?(forced_columns)   ? forced_columns : nil)
+      ) %>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <%= f.button :submit, t('general.actions.import'), disable_with: t('general.actions.importing'), id: 'btn-import-data', class: 'btn btn-primary' %>
+  </div>
+  <% end -%>
+</div>

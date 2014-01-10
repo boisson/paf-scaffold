@@ -1,0 +1,26 @@
+<div class="tab-content">
+  <div class="tab-pane active" id="tab-list">
+    <% unless defined?(content_for_list) %>
+      <%=render partial: 'advanced_search/modal_form' %>
+      <%=render partial: "list" %>
+    <% else %>
+      <%= content_for_list %>
+    <% end -%>
+  </div>
+  <div class="tab-pane" id="tab-new">
+    <%=content_for_new if defined?(content_for_new) %>
+  </div>
+  <div class="tab-pane" id="tab-edit">
+    <%=content_for_edit if defined?(content_for_edit) %>
+  </div>
+  <div class="tab-pane" id="tab-versions-of-object">
+    <%=content_for_version_from_object if defined?(content_for_version_from_object) %>
+  </div>
+  <div class="tab-pane" id="tab-show">
+    <%=content_for_show if defined?(content_for_show) %>
+  </div>
+  <div class="tab-pane" id="tab-versions">
+    <%=content_for_versions if defined?(content_for_versions) %>
+  </div>
+  <%=other_tabs if defined?(other_tabs) %>
+</div>

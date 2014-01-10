@@ -1,0 +1,12 @@
+$('#tab-new').html('')
+$('a[href="#tab-edit"]').tab('show')
+$('a[href="#tab-edit"]').parent().show()
+$('a[href="#tab-versions-of-object"]').parent().show()
+$('a[href="#tab-versions"]').parent().hide()
+$('#tab-edit').html('<%%= j(render :partial => 'edit' )%>')
+$('#tab-versions-of-object').html('<%%= j(render :partial => 'versions' )%>')
+
+
+<%% if params[:tab_versions] %>
+$('a[href="#tab-versions-of-object"]').tab('show')
+<%% end -%>

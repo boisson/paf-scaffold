@@ -1,0 +1,178 @@
+'fr':
+  date:
+    formats:
+      default: '%d/%m/%Y'
+  time:
+    formats:
+      short: '%d/%m, %H:%M h'
+  general:
+    export:
+      errors:
+        quantity_registers: 'Qté enregistrements'
+        quantity_success: 'Qté importé'
+        quantity_rejected: 'Qté rejeté'
+        line_rejected: 'Ligne %{line}'
+    messages:
+      create_success: '%{model_name} créé avec succès.'
+      update_success: '%{model_name} mise à jour avec succès.'
+      delete_success: '%{model_name} supprimé avec succès.'
+      create_error: 'Création pas réussi %{model_name}.'
+      update_error: 'Mise à jour pas réussi %{model_name}.'
+      delete_error: 'Suppression pas réussi.'
+      modal_ajax_error: "Une erreur s'est produite. Merci de contacter l'équipe Support."
+      delete_error_with_associations: 'Impossible de supprimer. Il existe des références à ce record.'
+    headers:
+      modal_import: 'Importation données'
+      modal_ajax_error: "Une erreur s'est produite"
+      modal_advanced_search: 'Recherche avancée'
+    terms:
+      all: All
+      import_hint: 'Import file'
+      copy_hint: 'Copy to clipboard'
+      print_hint: 'Print the data showed'
+      advanced_search_hint: 'Search with the parameters configured'
+      hide_column_hint: 'Show/Hide the columns desired'
+      lines_copied: 'Result copied to clipboard'
+      export_tip: 'Select an export method'
+      editing: 'Editing'
+      go_back: Go back
+      multiple-select:
+        search-placeholder: 'Recherche'
+        deselect-all: 'Supprimez tous'
+      active: 'Active'
+      inactive: 'Inactive'
+      'yes': 'Oui'
+      'no': 'Non'
+      choose: 'Choississez une option'
+    versions:
+      created: 'Record créé'
+      destroy: 'Record supprimé'
+      date: Date
+      before: Avant
+      after: Après
+      author: Utilisateur
+      current_data: Données actuelles
+      versions: Versions
+    actions:
+      export_tip: 'Select one option to export all data in the grid'
+      export: 'Export'
+      advanced-search:
+        link: 'Recherche avancée'
+        search: Recherche
+        add-conditions: 'Ajouter conditions'
+        remove-conditions: 'Supprimer'
+      send_email: 'Envoyer e-mail'
+      save_and_go_to_new: 'Sauvegardez et ajoutez nouveau'
+      hide_columns: 'Cachez colonnes'
+      confirm: 'Confirmez cette operation?'
+      confirm_lose: 'Confirmez cette operation? Des données non-sauvegardées seront perdues.'
+      confirm_delete_cascade: 'Confirm this operation? There are another informations using this register and they will lose too.'
+      cancel: 'Annulez'
+      list: 'Liste'
+      edit: 'Mettre à jour'
+      new: 'Nouveau'
+      versions: 'Versions'
+      show: 'Montrez'
+      delete: 'Supprimez'
+      delete_selected: 'Supprimez sélection'
+      revert: 'Annulez dernières modifications'
+      revert_success: 'Annulation avec succès!'
+      import_success: 'Importation avec succès!'
+      import_error_file_type: "Type de fichier inconnu. Seulement les fichiers xlsx sont supportés."
+      import_error_not_import_at_all: "Il y a des erreurs dans certaines lignes. Elles ne peuvent pas être importées. %{link_error_file}"
+      import_click_for_errors_details: "Cliquez ici pour voir ce qui s'est passé"
+      import: 'Importation données'
+      importing: 'Importation ...'
+      close_modal: 'Fermez'
+      download_example_file: 'Téléchargez un fichier example'
+      print: 'Imprimez'
+      copy: 'Copier'
+      logout: 'Déconnectez'
+      user_profile:
+        edit_profile: 'Mettez à jour Mon Profil'
+        my_profile: 'Mon Profil'
+        edit_password: 'Mettez à jour mot de passe'
+    datatable:
+      sProcessing: "Traitement ..."
+      sLengthMenu: "Montrez<br /> _MENU_"
+      sZeroRecords: "Aucun résultat"
+      sInfo: "A partir de _START_ à _END_ de _TOTAL_ records"
+      sInfoEmpty: "A partir de 0 à 0 de 0 records"
+      sInfoFiltered: "(filtré à _MAX_ records)"
+      sInfoPostFix: ""
+      sSearch: "Recherche:<br />"
+      sUrl: ""
+      sFirst: "Premier"
+      sPrevious: "Dernier"
+      sNext: "Suivant"
+      sLast: "Précédent"
+      en:
+  ransack:
+    search: "recherche"
+    predicate: "prédicat"
+    and: "et"
+    or: "ou"
+    any: "aucun"
+    all: "tous"
+    combinator: "combinateur"
+    attribute: "attribut"
+    value: "valeur"
+    condition: "condition"
+    sort: "tri"
+    asc: "croissant"
+    desc: "décroissant"
+    predicates:
+      eq: "est égal à"
+      eq_any: "est égal à aucun"
+      eq_all: "est égal à tous"
+      not_eq: "n'est pas égal à"
+      not_eq_any: "n'est pas égal à aucun"
+      not_eq_all: "n'est pas égal à tous"
+      matches: "répond à"
+      matches_any: "répond à aucun"
+      matches_all: "répond à tous"
+      does_not_match: "ne répond pas à"
+      does_not_match_any: "ne répond pas à aucun"
+      does_not_match_all: "ne répond pas à tous"
+      lt: "moins que"
+      lt_any: "moins que aucun"
+      lt_all: "moins que tous"
+      lteq: "moins que ou égal à"
+      lteq_any: "moins que ou égal à aucun"
+      lteq_all: "moins que ou égal à tous"
+      gt: "plus grand que"
+      gt_any: "plus grand que aucun"
+      gt_all: "plus grand que tous"
+      gteq: "plus grand que ou égal à"
+      gteq_any: "plus grand que ou égal à aucun"
+      gteq_all: "plus grand que ou égal à tous"
+      in: "dans"
+      in_any: "dans aucun"
+      in_all: "dans tous"
+      not_in: "pas dans"
+      not_in_any: "pas dans aucun"
+      not_in_all: "pas dans tous"
+      cont: "contient"
+      cont_any: "contient aucun"
+      cont_all: "contient tous"
+      not_cont: "ne contiens pas"
+      not_cont_any: "ne contiens pas aucun"
+      not_cont_all: "ne contiens pas tous"
+      start: "commance à"
+      start_any: "commance à aucun"
+      start_all: "commance à tous"
+      not_start: "ne commence pas à"
+      not_start_any: "ne commence pas à aucun"
+      not_start_all: "ne commence pas à tous"
+      end: "se termine à"
+      end_any: "se termine à aucun"
+      end_all: "se termine à tous"
+      not_end: "ne se termine pas à"
+      not_end_any: "ne se termine pas à aucun"
+      not_end_all: "ne se termine pas à tous"
+      'true': "est vrai"
+      'false': "est faux"
+      present: "est présent"
+      blank: "est blanc"
+      'null': "est vide"
+      not_null: "n'est pas vide"

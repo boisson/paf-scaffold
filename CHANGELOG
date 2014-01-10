@@ -1,0 +1,207 @@
+================ VERSION 0.0.10
+
+  - Fix i18n messages
+
+
+
+
+================ VERSION 0.0.9
+
+  - Fix deselect_all on multicolumn
+
+
+
+
+================ VERSION 0.0.8
+
+  - New defaults on css
+  - Fix application layout
+
+
+
+
+================ VERSION 0.0.7
+
+In this version the scaffold have advanced search and ransack gem by default
+
+=== For each model with advanced search
+  - Include ransack exclude columns module
+  - Add columns that will not be filtered, including associations
+
+  Example:
+
+  # UNRANSACKABLE_ATTRIBUTES = %w[category_id category color_ids accessory_ids specification_ids]
+  # include RansackableAttributes
+
+
+
+== For each index.html.erb
+  - Add button in collection of actions
+  
+  # <%= link_to t('general.actions.advanced-search.link'), '#', class: 'btn', id: 'btn-advanced-search'  %>
+
+
+  - Add modal for advanced search inner '<div class="tab-pane active" id="tab-list">'
+
+  # <%=render partial: 'advanced_search/modal_form' %>
+
+
+
+== For each _list.html.erb
+  - Add parameter "q" for ransack search
+
+  # data-source="<%= categories_url(format: "json", q: params[:q]) %>"
+
+
+
+== For each datatable.coffee
+  - Add columns that can be searchble
+  Careful add the lines at end of file and not inner of datatable code
+
+  # window.advanced_search_columns = 
+  #   id: 'integer'
+  #   name: 'string'
+
+
+== For each controller
+  - Add builder for ransack based on model
+
+  # @search = Language.search(params[:q])
+
+
+
+== For each datatable file
+  - Add ransack modification
+
+  # def fetch_categories
+  #   if params[:q].blank?
+  #     categories = Category.unscoped
+  #   else
+  #     search = Category.search(params[:q])
+  #     categories = search.result
+  #   end
+  # 
+  #   categories = categories.order(sort_columns)
+  #     .page(page).per_page(per_page)
+  #         
+  # 
+  #   if params[:sSearch].present?
+  #     categories = categories.where("categories.id LIKE :search OR 
+  #     categories.name LIKE :search", search: "%#{params[:sSearch]}%")
+  #   end
+  #   categories.uniq
+  # end
+  
+
+================ VERSION 0.0.6
+
+=== For each model with belongs_to association
+  - Add accessible with name of association
+
+  # belongs_to :category
+  # attr_accessible :category
+
+
+
+
+================ VERSION 0.0.5
+
+=== For each _list.html.erb
+  - Cut the part of buttons on top and move to index.html.erb of model
+  - Change last column width to 226
+
+  See example (warning, its only example, change for what exists in file):
+
+  # _list.html.erb
+
+  <table id="categories_datatable" class="crud_datatable table table-condensed table-bordered table-striped table_vam" 
+    data-export-xlsx-url="<%= export_data_in_xlsx_url('Category') %>" 
+    data-export-pdf-url="<%= export_data_in_pdf_url('Category') %>" 
+    data-new-path="<%= new_category_path %>" 
+    data-source="<%= categories_url(format: "json") %>">
+  <thead>
+    <tr>
+      <th width="20"><input type="checkbox" name="select_rows" class="select_rows" /></th>
+      <th width="70"><%= Category.human_attribute_name :id %></th>
+      <th><%= Category.human_attribute_name :name %></th>
+      <th width="226"></th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+  </table>
+
+  # index.html.erb
+
+  <div class="tabbable">
+  <div class="pull-right">
+    <div id="btns-on-tabs">
+      <div class="btn-group pull-right">
+        <%= link_to t('general.actions.delete_selected', model: t('activerecord.models.product')), {controller: :menus, action: :batch_destroy, ids: []}, class: 'btn btn-danger', confirm: t('general.actions.confirm'), title: t('general.actions.delete_selected'), method: :delete, id: :batch_destroy_link  %>
+        <a href="#" data-toggle="dropdown" class="btn dropdown-toggle"><%=t('general.actions.hide_columns')%><span class="caret"></span></a>
+        <ul class="dropdown-menu tableMenu" id="dt_d_nav">
+          <li><label class="checkbox" for="dt_col_1"><input type="checkbox" value="1" id="dt_col_1" name="toggle-cols" checked="checked" data-attribute-name="id" /> <%= Menu.human_attribute_name :id %></label></li>
+          <li><label class="checkbox" for="dt_col_2"><input type="checkbox" value="2" id="dt_col_2" name="toggle-cols" checked="checked" data-attribute-name="name" /> <%= Menu.human_attribute_name :name %></label></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- rest of content -->
+
+
+
+=== For application.html.erb
+  - In end of file close to 'gebo_sidebar.make();' the code inside script tag should be
+
+  <script>
+  $(document).ready(function() {
+    //* calculate sidebar height
+    gebo_sidebar.make();
+    //* show all elements & remove preloader
+    setTimeout('$("html").removeClass("js")',1000);
+  });
+  </script>
+
+  - Include multiple select library at end of file
+
+  <script src="/lib/multiselect/js/jquery.multi-select.min.js"></script>
+
+
+
+=== For each save.js.erb
+  - In else section that have the failure of save, replace the timeout for 8000 (more and less on line 12). See example
+
+  $.sticky('<%= j flash[:error] %>', {autoclose : 8000, position: "top-center", type: "st-error" });
+
+
+
+=== For each _datatable.rb of model (product_datatable.rb, menu_datatable.rb...)
+  - Add VIEW button in method 'data'. See example replacing for name and url for each model:
+
+  link_to(t('general.actions.show'), menu_path(menu), title: t('general.actions.show'), class: 'btn', remote: true),
+
+
+
+=== For each index.html.erb
+  - Replace the name of modal import. See example replacing for name of model:
+
+  <%=render partial: 'import/modal_form', locals: {class_to_import: 'Menu'} %>
+
+
+
+=== NxN Component with 2 columns
+  - Prepare with the commom code in model of the association
+  - In your form write the code (change the name of association):
+
+  <%= f.input :categories, :wrapper => :prepend do %>
+    <div class="chosen-multiple-2-columns" id="nxn_categories" data-search-placeholder="<%= t('general.terms.multiple-select.search-placeholder') %>" data-deselect-all="<%= t('general.terms.multiple-select.deselect-all') %>"><%= f.association :categories %></div>
+  <% end %>
+
+
+
+
+=== NxN inline
+  - Prepare with the commom code in model of the association
+  - In your form write the code (change the name of association):
+
+  <%= f.association :categories, input_html: {class: 'span5 chosen-multiple'} %>

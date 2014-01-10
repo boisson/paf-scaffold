@@ -1,0 +1,178 @@
+'nl':
+  date:
+    formats:
+      default: '%d/%m/%Y'
+  time:
+    formats:
+      short: '%d/%m, %H:%M h'
+  general:
+    export:
+      errors:
+        quantity_registers: 'Aantal geregistreerd'
+        quantity_success: 'Aantal geïmporteerd'
+        quantity_rejected: 'Aantal geweigerd'
+        line_rejected: 'Lijn %{line}'
+    messages:
+      create_success: '%{model_name} werd succesvol aangemaakt.'
+      update_success: '%{model_name} werd succesvol bijgewerkt.'
+      delete_success: '%{model_name} succesvol verwijderd.'
+      create_error: 'Aanmaken mislukt: %{model_name}.'
+      update_error: 'Bijwerken mislukt: %{model_name}.'
+      delete_error: 'Verwijderen mislukt.'
+      modal_ajax_error: 'Er is een fout opgetreden. Contacteer Support.'
+      delete_error_with_associations: 'Verwijderen niet mogelijk. Er zijn verwijzingen naar dit record.'
+    headers:
+      modal_import: 'Gegevens importeren'
+      modal_ajax_error: 'Er is een fout opgetreden'
+      modal_advanced_search: 'Uitgebreid zoeken'
+    terms:
+      all: All
+      import_hint: 'Import file'
+      copy_hint: 'Copy to clipboard'
+      print_hint: 'Print the data showed'
+      advanced_search_hint: 'Search with the parameters configured'
+      hide_column_hint: 'Show/Hide the columns desired'
+      lines_copied: 'Result copied to clipboard'
+      export_tip: 'Select an export method'
+      editing: 'Editing'
+      go_back: Go back
+      multiple-select:
+        search-placeholder: 'Zoek'
+        deselect-all: 'Verwijder allemaal'
+      active: 'Aktief'
+      inactive: 'Inaktief'
+      'yes': 'Ja'
+      'no': 'Nee'
+      choose: 'Kies een optie'
+    versions:
+      created: 'Record aangemaakt'
+      destroy: 'Record verwijderd'
+      date: Datum
+      before: Voor
+      after: Na
+      author: Auteur
+      current_data: Actuele gegevens
+      versions: Versies
+    actions:
+      export_tip: 'Select one option to export all data in the grid'
+      export: 'Export'
+      advanced-search:
+        link: 'Uitgebreid zoeken'
+        search: Zoek
+        add-conditions: 'Voeg voorwaarden toe'
+        remove-conditions: 'Verwijder'
+      send_email: 'Zend e-mail'
+      save_and_go_to_new: 'Bewaar en voeg nieuw toe'
+      hide_columns: 'Verberg kolommen'
+      confirm: 'Bevestig deze operatie?'
+      confirm_lose: 'Bevestig deze operatie? Niet bewaarde gegevens zullen verloren zijn.'
+      confirm_delete_cascade: 'Confirm this operation? There are another informations using this register and they will lose too.'
+      cancel: 'Annuleer'
+      list: 'Lijst'
+      edit: 'Bewerk'
+      new: 'Nieuw'
+      versions: 'Versies'
+      show: 'Toon'
+      delete: 'Verwijder'
+      delete_selected: 'Verwijder selectie'
+      revert: 'Maak laatste wijziging ongedaan'
+      revert_success: 'Succesvol ongedaan gemaakt!'
+      import_success: 'Succesvol geïmporteerd!'
+      import_error_file_type: "Onbekend bestandstype. Enkel xlsx bestanden zijn ondersteund."
+      import_error_not_import_at_all: "Sommige lijnen bevatten fouten en kunnen niet geïmporteerd worden. %{link_error_file}"
+      import_click_for_errors_details: 'Klik voor meer details'
+      import: 'Importeer gegevens'
+      importing: 'Importeer...'
+      close_modal: 'Sluit'
+      download_example_file: 'Download een voorbeeldbestand'
+      print: 'Print'
+      copy: 'Copy'
+      logout: 'Log uit'
+      user_profile:
+        edit_profile: 'Wijzig mijn profiel'
+        my_profile: 'Mijn profiel'
+        edit_password: 'Wijzig paswoord'
+    datatable:
+      sProcessing: "Verwerking bezig ..."
+      sLengthMenu: "Toon<br />_MENU_"
+      sZeroRecords: "Geen resultaten"
+      sInfo: "Start van _START_ tot _END_ van _TOTAL_ records"
+      sInfoEmpty: "Start van 0 tot 0 van 0 records"
+      sInfoFiltered: "(filter van _MAX_ records)"
+      sInfoPostFix: ""
+      sSearch: "Zoek:<br />"
+      sUrl: ""
+      sFirst: "Eerste"
+      sPrevious: "Laatste"
+      sNext: "Volgende"
+      sLast: "Vorige"
+      en:
+  ransack:
+    search: "zoek"
+    predicate: "toekenning"
+    and: "en"
+    or: "of"
+    any: "geen enkele"
+    all: "alle"
+    combinator: "combinator"
+    attribute: "attribuut"
+    value: "waarde"
+    condition: "conditie"
+    sort: "sorteer"
+    asc: "oplopend"
+    desc: "aflopend"
+    predicates:
+      eq: "is gelijk aan"
+      eq_any: "is gelijk aan geen enkele"
+      eq_all: "is gelijk aan alle"
+      not_eq: "is niet gelijk aan"
+      not_eq_any: "is niet gelijk aan geen enkele"
+      not_eq_all: "is niet gelijk aan alle"
+      matches: "matcht"
+      matches_any: "matcht geen enkele"
+      matches_all: "matcht alle"
+      does_not_match: "matcht niet"
+      does_not_match_any: "matcht niet geen enkele"
+      does_not_match_all: "matcht niet alle"
+      lt: "minder dan"
+      lt_any: "minder dan geen enkele"
+      lt_all: "minder dan alle"
+      lteq: "minder dan of gelijk aan"
+      lteq_any: "minder dan of gelijk aan geen enkele"
+      lteq_all: "minder dan of gelijk aan alle"
+      gt: "groter dan"
+      gt_any: "groter dan geen enkele"
+      gt_all: "groter dan alle"
+      gteq: "groter dan of gelijk aan"
+      gteq_any: "groter dan of gelijk aan geen enkele"
+      gteq_all: "groter dan of gelijk aan alle"
+      in: "in"
+      in_any: "in geen enkele"
+      in_all: "in alle"
+      not_in: "niet in"
+      not_in_any: "niet in geen enkele"
+      not_in_all: "niet in alle"
+      cont: "bevat"
+      cont_any: "bevat geen enkele"
+      cont_all: "bevat alle"
+      not_cont: "bevat niet"
+      not_cont_any: "bevat niet geen enkele"
+      not_cont_all: "bevat niet alle"
+      start: "start met"
+      start_any: "start met geen enkele"
+      start_all: "start met alle"
+      not_start: "start niet met"
+      not_start_any: "start niet met geen enkele"
+      not_start_all: "start niet met alle"
+      end: "eindigt met"
+      end_any: "eeindigt met geen enkele"
+      end_all: "eindigt met alle"
+      not_end: "eindigt niet met"
+      not_end_any: "eindigt niet met geen enkele"
+      not_end_all: "eindigt niet met alle"
+      'true': "is waar"
+      'false': "is niet waar"
+      present: "is aanwezig"
+      blank: "is blanco"
+      'null': "is leeg"
+      not_null: "is niet leeg"

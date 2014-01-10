@@ -1,0 +1,8 @@
+<ul class="nav nav-tabs" id="crud-tab">
+  <li class="active"><a href="#tab-list" data-toggle="tab"><%=t('general.actions.list')%></a></li>
+  <li><a href="#tab-new" data-action-path="<%=  url_for(action: :new, only_path: true) %>" data-toggle="tab"><%=t('general.actions.new')%></a></li>
+  <li style="display:none"><a href="#tab-edit" data-toggle="tab"><%=t('general.actions.edit')%></a></li>
+  <li style="display:none"><a href="#tab-show" data-toggle="tab"><%=t('general.actions.show')%></a></li>
+  <li style="display:none"><a href="#tab-versions-of-object" data-toggle="tab"><%=t('general.actions.versions')%></a></li>
+  <li><a href="#tab-versions" data-action-path="<%= versions_of_model_path(base_class: (defined?(base_class) ? base_class : controller.controller_name.singularize.classify)) %>" data-toggle="tab"><%=t('general.actions.versions')%></a></li>
+</ul>

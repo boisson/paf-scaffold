@@ -1,0 +1,220 @@
+it:
+  date:
+    abbr_day_names:
+    - Sun
+    - Mon
+    - Tue
+    - Wen
+    - Thu
+    - Fri
+    - Sat
+    abbr_month_names:
+    - 
+    - Jan
+    - Feb
+    - Mar
+    - Apr
+    - May
+    - Jun
+    - Jul
+    - Aug
+    - Sep
+    - Oct
+    - Nov
+    - Dec
+    day_names:
+    - Sunday
+    - Monday
+    - Tuesday
+    - Wednesday
+    - Thusday
+    - Friday
+    - Saturday
+    formats:
+      default: ! '%d/%m/%Y'
+      long: ! '%d de %B de %Y'
+      short: ! '%d de %B'
+    month_names:
+    - 
+    - January
+    - February
+    - March
+    - April
+    - May
+    - June
+    - July
+    - August
+    - September
+    - October
+    - November
+    - December
+    order:
+    - :day
+    - :month
+    - :year
+  datetime:
+    distance_in_words:
+      about_x_hours:
+        one: around 1 hour
+        other: around %{count} hours
+      about_x_months:
+        one: around 1 month
+        other: around %{count} months
+      about_x_years:
+        one: around 1 year
+        other: around %{count} years
+      almost_x_years:
+        one: quase 1 year
+        other: quase %{count} years
+      half_a_minute: half minute
+      less_than_x_minutes:
+        one: less than one minute
+        other: less than %{count} minutes
+      less_than_x_seconds:
+        one: less than 1 second
+        other: less than %{count} seconds
+      over_x_years:
+        one: more than 1 year
+        other: more than %{count} years
+      x_days:
+        one: 1 day
+        other: ! '%{count} days'
+      x_minutes:
+        one: 1 minute
+        other: ! '%{count} minutes'
+      x_months:
+        one: 1 month
+        other: ! '%{count} months'
+      x_seconds:
+        one: 1 second
+        other: ! '%{count} seconds'
+    prompts:
+      day: Day
+      hour: Hour
+      minute: Minute
+      month: Month
+      second: Second
+      year: Year
+  errors: &errors
+    format: ! '%{attribute} %{message}'
+    messages:
+      accepted: should be accept
+      blank: cannot be blank
+      confirmation: is not equal
+      empty: cannot be null
+      equal_to: can be equal than %{count}
+      even: should be even
+      exclusion: is not permited
+      greater_than: should be more than %{count}
+      greater_than_or_equal_to: should be more or equal than %{count}
+      inclusion: is not included in list
+      invalid: is invalid
+      less_than: should be less than %{count}
+      less_than_or_equal_to: should be less or equal than %{count}
+      not_a_number: is not number
+      not_an_integer: is not integer
+      odd: should be odd
+      record_invalid: ! 'The validation fail: %{errors}'
+      taken: in used
+      too_long: ! 'too long (maximum: %{count} caracter(s))'
+      too_short: ! 'too short (minimum: %{count} caracter(s))'
+      wrong_length: wrong length (%{count} caracter(s))
+    template:
+      body: ! 'Please, verify the following field(s):'
+      header:
+        one: ! 'is not possible to save %{model}: 1 error'
+        other: ! 'is not possible to save %{model}: %{count} errors.'
+  helpers:
+    select:
+      prompt: Please select
+    submit:
+      edit: Edit record
+      create: Create record
+      submit: Save information
+      update: Change information
+  number:
+    currency:
+      format:
+        delimiter: .
+        format: ! '%u %n'
+        precision: 2
+        separator: ! ','
+        significant: false
+        strip_insignificant_zeros: false
+        unit: $
+    format:
+      delimiter: .
+      precision: 3
+      separator: ! ','
+      significant: false
+      strip_insignificant_zeros: false
+    human:
+      decimal_units:
+        format: ! '%n %u'
+        units:
+          billion:
+            one: billion
+            other: billions
+          million:
+            one: million
+            other: millions
+          quadrillion:
+            one: quadrillion
+            other: quadrillions
+          thousand: thousand
+          trillion:
+            one: trillion
+            other: trillions
+          unit: ''
+      format:
+        delimiter: .
+        precision: 2
+        significant: true
+        strip_insignificant_zeros: true
+      storage_units:
+        format: ! '%n %u'
+        units:
+          byte:
+            one: Byte
+            other: Bytes
+          gb: GB
+          kb: KB
+          mb: MB
+          tb: TB
+    percentage:
+      format:
+        delimiter: .
+    precision:
+      format:
+        delimiter: .
+  support:
+    array:
+      last_word_connector: ! ' and '
+      two_words_connector: ! ' and '
+      words_connector: ! ', '
+  time:
+    am: ''
+    formats:
+      default: ! '%d of %B of %Y, %H:%M h'
+      long: ! '%A, %d of %B of %Y, %H:%M h'
+      short: ! '%d/%m, %H:%M h'
+    pm: ''
+  # remove these aliases after 'activemodel' and 'activerecord' namespaces are removed from Rails repository
+  activemodel:
+    errors:
+      <<: *errors
+  activerecord:
+    errors:
+      <<: *errors
+    attributes:
+      user:
+        email: "E-mail"
+        name: "Name"
+        password: "Password"
+        password_confirmation: "Confirm the password"
+        current_password: "Actual Password"
+        active: "Active?"
+        phone: "Phone"
+        created_at: "Create at"
+        updated_at: "last change "
+        remember_me: "Remember of me"

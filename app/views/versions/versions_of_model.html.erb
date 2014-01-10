@@ -1,0 +1,14 @@
+<table id="generic_versions_datatable" class="table table-bordered table-striped table_vam" data-source="<%= versions_of_model_url(base_class: params[:base_class], format: "json") %>">
+<thead>
+  <tr>
+    <th width="70">Id</th>
+    <th width="150"><%= t('general.versions.date') %></th>
+    <th width="300"><%= t('general.versions.before') %></th>
+    <th width="300"><%= t('general.versions.after') %></th>
+    <th><%= t('general.versions.author') %></th>
+  </tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+<%= javascript_include_tag :generic_versions_datatable %>

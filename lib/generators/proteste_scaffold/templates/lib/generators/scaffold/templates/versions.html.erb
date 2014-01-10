@@ -1,0 +1,30 @@
+<table id="object_versions" class="table table-bordered table-striped table-condensed">
+  <thead>
+    <tr>
+      <th width="150"><%%= t('general.versions.date') %></th>
+      <th width="300"><%%= t('general.versions.before') %></th>
+      <th width="300"><%%= t('general.versions.after') %></th>
+      <th><%%= t('general.versions.author') %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <%% @<%=singular_table_name%>.versions.reverse.each do |version| %>
+    <tr>
+      <td><%%= l version.created_at %></td>
+      <td>
+        <%% version.changeset.each do |field, values| %>
+          <div><strong><%%= <%=class_name%>.human_attribute_name field %></strong>: <em><%%= values[0] %></em></div>
+        <%% end -%>
+      </td>
+      <td>
+        <%% version.changeset.each do |field, values| %>
+          <div><strong><%%= <%=class_name%>.human_attribute_name field %></strong>: <em><%%= values[1] %></em></div>
+        <%% end -%>
+      </td>
+    <td><%%= version.user.name rescue version.whodunnit %></td>
+    </tr>
+    <%% end -%>
+  </tbody>
+</table>
+
+<%%= actions_for_versions_of_object %>
