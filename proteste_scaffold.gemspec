@@ -15,7 +15,12 @@ Gem::Specification.new do |gem|
   gem.require_paths = ["lib"]
   gem.version       = ProtesteScaffold::VERSION
 
-  gem.add_development_dependency "ZenTest"
+  gem.add_development_dependency('ZenTest')
+  gem.add_development_dependency('rspec')
+  gem.add_development_dependency('rspec-rails')
+  gem.add_development_dependency('simplecov', '0.7.1')
+  gem.add_development_dependency('simplecov-rcov', '0.2.3')
+
   # gem.add_runtime_dependency('pg')
   gem.add_runtime_dependency('rails','3.2.13')
   # gem.add_runtime_dependency('rails','4.0.0')
@@ -33,10 +38,6 @@ Gem::Specification.new do |gem|
   gem.add_runtime_dependency('simple_xlsx_writer')
   gem.add_runtime_dependency('acts_as_xlsx')
   gem.add_runtime_dependency('prawn')
-  gem.add_runtime_dependency('rspec')
-  gem.add_runtime_dependency('rspec-rails')
   gem.add_runtime_dependency('ransack', '0.7.2')
   gem.add_runtime_dependency('rubyzip', '~> 0.9.9')
-  gem.add_runtime_dependency('simplecov', '0.7.1')
-  gem.add_runtime_dependency('simplecov-rcov', '0.2.3')
 end
